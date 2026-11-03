@@ -1,16 +1,19 @@
-# React + Vite
+# Поиск деталей
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Приложение для поиска деталей по артикулу через веб-сервис «Проценка».
+Показывает найденных производителей, предложения складов и аналоги выбранной
+детали. Признак невозвратной позиции запрашивается у API отдельно.
 
-Currently, two official plugins are available:
+## Запуск
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Установите зависимости: `npm install`.
+2. Скопируйте `.env.example` в `.env` и укажите ключ покупателя в `VITE_API_KEY`.
+3. Запустите приложение: `npm run dev`.
 
-## React Compiler
+Ключ Vite доступен в коде браузера, поэтому используйте только ключ, который
+можно предоставлять клиенту. Для рабочей сборки запустите `npm run build`,
+для проверки кода — `npm run lint`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Поиск на главной странице запускается кнопкой «Найти». Нажмите на название
+детали, чтобы открыть её страницу и аналоги. Цена указана для каждого склада.
+Описание API находится в `wsprice.html`.

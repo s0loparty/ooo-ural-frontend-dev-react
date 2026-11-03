@@ -4,12 +4,8 @@
     "singleAttributePerLine": false,
     "htmlWhitespaceSensitivity": "css",
     "printWidth": 80,
-    "plugins": [
-        "prettier-plugin-tailwindcss"
-    ],
-    "importOrderSeparation": true,
-    "importOrderSortSpecifiers": true,
+    "plugins": ["prettier-plugin-tailwindcss"],
     "tailwindFunctions": ["clsx", "cn", "cva"],
-    "tailwindStylesheet": "resources/css/app.css",
-    "tabWidth": 4
+    "tailwindStylesheet": "src/assets/main.css",
+    "tabWidth": 2
 }
