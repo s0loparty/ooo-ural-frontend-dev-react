@@ -32,7 +32,7 @@ jobs:
         run: npm run build -- --base "$PAGES_BASE_PATH/"
         env:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+          VITE_API_KEY: ${{ vars.VITE_API_KEY }}
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
